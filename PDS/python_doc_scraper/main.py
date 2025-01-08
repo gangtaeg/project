@@ -22,6 +22,20 @@ async def main():
     
     print(f'{query} 도움말이 번역되어 {file_name}에 저장되었습니다.')
 
+async def translate_large_text(content, chunk_size=5000):
+    chunks = [content[i:i + chunk_size] for i in range(0, len(content), chunk_size)]
+    translated_chunks = []
+    for chunk in chunks:
+        translated = await translate_text(chunk)
+        translated_chunks.append(translated)
+    return ''.join(translated_chunks)
+
+@app.get("/translate")
+async def translate(query: str):
+    content = scrape_python_doc(query)
+    translated = await translate_large_text(content)
+    return {"result": translated}
+
 # 동기 함수에서 비동기 translate_text 호출
 def sync_translate(query: str):
     content = scrape_python_doc(query)
