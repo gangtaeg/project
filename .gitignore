@@ -179,3 +179,5 @@ pyrightconfig.json
 *.html
 *.css
 *.js
+
+.obsidian/
