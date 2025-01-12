@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카테고리 결과</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>카테고리별 상품 결과</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>검색 키워드</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.keyword }}</td>
+                <td>{{ item.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/category">카테고리로 돌아가기</a>
+</body>
+</html>

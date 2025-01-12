@@ -3,161 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <style>
-        /* 기본 스타일링 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-            color: #333;
-            margin: 0;
-            overflow-x: hidden;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(to right, #77dd77, #b9fbc0);
-            position: relative;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-bottom: 5px solid #28a745;
-        }
-
-        header img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 100px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.2rem;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #343a40;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #495057;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            color: #6c757d;
-            font-size: 0.9rem;
-            border-top: 1px solid #ddd;
-        }
-
-        footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>서비스 - SeeSaw</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo">
-        <h1>Our Services</h1>
+        <h1>SeeSaw 서비스</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="features.html">Features</a>
-            <a href="services.html">Services</a>
-            <a href="technology.html">Technology</a>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="features.html">주요 기능</a></li>
+                <li><a href="services.html" class="active">서비스</a></li>
+                <li><a href="technology.html">기술 소개</a></li>
+                <li><a href="category.html">카테고리</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section>
-        <h2 class="section-title">Our Services</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Secure Payments</h3>
-                <p>We provide fast and secure payment processing for all users, ensuring safe transactions.</p>
-            </div>
-            <div class="card">
-                <h3>24/7 Customer Support</h3>
-                <p>Our support team is available 24/7 to assist you with any questions or concerns you may have.</p>
-            </div>
-            <div class="card">
-                <h3>Dispute Resolution</h3>
-                <p>We offer dedicated assistance for resolving any disputes between buyers and sellers effectively.</p>
-            </div>
-            <div class="card">
-                <h3>Multi-Language Support</h3>
-                <p>Our platform supports multiple languages, allowing users from around the world to interact effortlessly.</p>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section>
+            <h2>안전 보장 서비스</h2>
+            <p>중고 거래에서 발생할 수 있는 위험을 최소화합니다.</p>
+        </section>
+
+        <section>
+            <h2>데이터 기반 추천</h2>
+            <p>사용자의 관심사에 맞춘 상품과 서비스를 추천합니다.</p>
+        </section>
+
+        <section>
+            <h2>사용자 친화적 인터페이스</h2>
+            <p>누구나 쉽게 사용할 수 있도록 설계된 직관적인 디자인입니다.</p>
+        </section>
+
+        <section>
+            <h2>24/7 고객 지원</h2>
+            <p>언제든지 도움을 받을 수 있는 실시간 고객 지원 서비스를 제공합니다.</p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 SeeSaw. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2025 SeeSaw. 모든 권리 보유.</p>
     </footer>
 </body>
 </html>
