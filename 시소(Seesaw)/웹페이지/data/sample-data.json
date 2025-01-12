@@ -1,0 +1,29 @@
+{
+  "latestPrice": 145,
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2025-01-01",
+      "buyer": "UserA",
+      "seller": "UserB",
+      "amount": 100,
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "date": "2025-01-02",
+      "buyer": "UserC",
+      "seller": "UserD",
+      "amount": 50,
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "date": "2025-01-03",
+      "buyer": "UserE",
+      "seller": "UserF",
+      "amount": 200,
+      "status": "completed"
+    }
+  ]
+}
