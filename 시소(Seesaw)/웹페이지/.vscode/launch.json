@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py",
+            "console": "integratedTerminal",
+            "env": {
+                "FLASK_APP": "app.py",
+                "FLASK_ENV": "development"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "justMyCode": true,
+            "pythonPath": "${workspaceFolder}/SeeSaw/venv/Scripts/python.exe"  // 가상환경 경로 추가
+        }
+    ]
+}

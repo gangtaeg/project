@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 - SeeSaw</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='libs/chart.min.js') }}"></script>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='assets/logo.jpg') }}" alt="SeeSaw 로고">
+        <h1>SeeSaw - 안전 거래 플랫폼</h1>
+        <nav>
+            <a href="index.html">홈</a>
+            <a href="features.html">기능</a>
+            <a href="services.html">서비스</a>
+            <a href="technology.html">기술</a>
+            <a href="dispute.html">분쟁</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>시세 변동</h2>
+        <canvas id="priceChart"></canvas>
+        <button id="loadDataBtn">시세 데이터 로드</button>
+        <div id="errorMessage" style="color: red; display: none;">시세 데이터를 로드하는 데 실패했습니다. 다시 시도해주세요.</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SeeSaw. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 샘플 시세 데이터
+        const priceData = {
+            labels: ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00'],
+            datasets: [{
+                label: '시세 변동',
+                data: [100, 110, 105, 120, 130, 125],  // 시세 값
+                borderColor: 'rgba(0, 123, 255, 1)',  // 시세 변동선 색상
+                backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                borderWidth: 2,
+                fill: true
+            }]
+        };
+
+        // 차트 생성
+        const ctx = document.getElementById('priceChart').getContext('2d');
+        const priceChart = new Chart(ctx, {
+            type: 'line',  // 차트 종류 (라인 차트)
+            data: priceData,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // 시세 데이터 로드 버튼 클릭 시 차트 업데이트
+        document.getElementById('loadDataBtn').addEventListener('click', function() {
+            // 예외 처리: 실패 시
+            try {
+                // 여기서 시세 데이터를 API 호출이나 다른 방법으로 불러오는 과정 예시
+                // 만약 실패한다면 throw error를 발생시킬 수 있습니다.
+                const newPriceData = [115, 120, 110, 125, 130, 140];  // 새 시세 데이터 (예시)
+
+                // 만약 데이터가 제대로 로드되었으면
+                priceChart.data.datasets[0].data = newPriceData;  
+                priceChart.update();  // 차트 업데이트
+
+                // 오류 메시지 숨기기
+                document.getElementById('errorMessage').style.display = 'none';
+            } catch (error) {
+                // 예외 발생 시 오류 메시지 표시
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

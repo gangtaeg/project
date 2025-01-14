@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기능 - SeeSaw</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='assets/images/logo.jpg') }}" alt="SeeSaw 로고">
+        <h1>SeeSaw - 안전 거래 플랫폼</h1>
+        <p>SeeSaw의 주요 기능을 소개합니다.</p>
+        <nav>
+            <a href="index.html">홈</a>
+            <a href="services.html">서비스</a>
+            <a href="technology.html">기술</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2 class="section-title">SeeSaw의 주요 기능</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>실시간 시세 추적</h3>
+                <p>사용자는 거래할 물건의 최신 시세를 실시간으로 추적하고, 가격 변동을 쉽게 확인할 수 있습니다. 시세 변화에 대한 직관적인 그래프 제공으로 거래 결정을 돕습니다.</p>
+            </div>
+            <div class="card">
+                <h3>거래 내역 관리</h3>
+                <p>모든 거래 내역을 안전하게 저장하고, 사용자는 거래 상태를 실시간으로 확인할 수 있습니다. 완료된 거래, 진행 중인 거래 등을 쉽게 관리할 수 있습니다.</p>
+            </div>
+            <div class="card">
+                <h3>알림 기능</h3>
+                <p>시세 변동이나 거래 상태 변화에 대해 즉시 알림을 받을 수 있어 중요한 거래 타이밍을 놓치지 않습니다. 알림을 통해 사용자에게 유용한 정보를 전달합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SeeSaw. All rights reserved.</p>
+    </footer>
+</body>
+</html>
