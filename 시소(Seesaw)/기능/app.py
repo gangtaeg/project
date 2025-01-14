@@ -1,6 +1,8 @@
+import os
 from flask import Flask, render_template
 
-app = Flask(__name__)
+# Flask 앱에서 템플릿 폴더 경로 설정
+app = Flask(__name__, template_folder=os.path.join(os.getcwd(), '웹페이지', 'templates'))
 
 @app.route('/')
 def index():
