@@ -1,8 +1,10 @@
 /* 전반적인 스타일 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -21,6 +23,10 @@ header h1 {
     font-size: 2rem;
 }
 
+header nav {
+    margin-top: 10px;
+}
+
 header nav a {
     color: white;
     margin: 0 15px;
@@ -32,24 +38,13 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-footer {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-section {
-    margin: 20px;
-}
-
-h2 {
-    font-size: 1.5rem;
-    color: #007bff;
-}
-
-h3 {
-    color: #007bff;
+/* 분쟁 항목 스타일 */
+.dispute-item {
+    background-color: #f0f8ff;
+    border: 1px solid #007bff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
 /* 주요 기능 카드 */
@@ -64,6 +59,12 @@ h3 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
@@ -78,17 +79,55 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
-/* 분쟁 항목 스타일 */
-.dispute-item {
-    background-color: #f0f8ff;
-    border: 1px solid #007bff;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+button:active {
+    transform: translateY(1px);
+}
+
+/* 전반적인 섹션 스타일 */
+section {
+    margin: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+h3 {
+    color: #007bff;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        margin: 0 10px;
+    }
+}
+
+/* 푸터 */
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

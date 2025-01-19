@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "계약서.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "계약서"
             }
           }
         ],
@@ -179,6 +179,7 @@
   },
   "active": "5ca06cf5e846bfc4",
   "lastOpenFiles": [
+    "README.md",
     "계약서.md",
     "계획서/Seesaw(시소) - 안전 거래 플랫폼(전체 내용).md",
     "SeeSaw/share",
